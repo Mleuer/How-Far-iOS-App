@@ -14,6 +14,7 @@
 		4595E12C22D55A7300788103 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4595E12A22D55A7300788103 /* LaunchScreen.storyboard */; };
 		4595E13722D55A7300788103 /* How_FarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4595E13622D55A7300788103 /* How_FarTests.swift */; };
 		4595E14222D55A7300788103 /* How_FarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4595E14122D55A7300788103 /* How_FarUITests.swift */; };
+		4595E15022D55DC900788103 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4595E14F22D55DC900788103 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		4595E13D22D55A7300788103 /* How FarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "How FarUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4595E14122D55A7300788103 /* How_FarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = How_FarUITests.swift; sourceTree = "<group>"; };
 		4595E14322D55A7300788103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4595E14F22D55DC900788103 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				4595E12122D55A7200788103 /* AppDelegate.swift */,
 				4595E12322D55A7200788103 /* ViewController.swift */,
 				4595E12522D55A7200788103 /* Main.storyboard */,
+				4595E14F22D55DC900788103 /* User.swift */,
 				4595E12822D55A7300788103 /* Assets.xcassets */,
 				4595E12A22D55A7300788103 /* LaunchScreen.storyboard */,
 				4595E12D22D55A7300788103 /* Info.plist */,
@@ -258,6 +261,7 @@
 			files = (
 				4595E12422D55A7200788103 /* ViewController.swift in Sources */,
 				4595E12222D55A7200788103 /* AppDelegate.swift in Sources */,
+				4595E15022D55DC900788103 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
