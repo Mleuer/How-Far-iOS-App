@@ -9,19 +9,28 @@
 import Foundation
 import CoreLocation
 
-class User {
+class User: NSObject, CLLocationManagerDelegate {
     
     //MARK: Properties
     var distance: Measurement<UnitLength> { get {return Measurement(value: 0, unit: UnitLength.feet)}}
     var locationManager: CLLocationManager = CLLocationManager()
-    var startingPoint: CLLocation
+    var startingPoint: CLLocation? = nil
     
-    init() {
-        startingPoint = locationManager.location!
+    public func setStartingPoint() {
+        
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        startingPoint = locations.last
+        var startingCoordinate = startingPoint?.coordinate
     }
 
-    
-    
-    
-    
 }

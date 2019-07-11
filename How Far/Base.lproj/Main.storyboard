@@ -24,6 +24,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
+                                    <action selector="handleSetStartingPoint:" destination="lUF-aS-gD1" eventType="touchUpInside" id="Md2-nH-DjU"/>
                                     <action selector="setStartingPoint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="waj-fK-wOr"/>
                                 </connections>
                             </button>
@@ -43,6 +44,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="lUF-aS-gD1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
