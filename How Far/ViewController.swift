@@ -18,14 +18,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+       
     }
 
     //Mark: Actions
     @IBAction func setStartingPoint(_ sender: UIButton) {
-        user.setStartingPoint()
+        user.markStartingPoint()
+        
+        distanceLabel.text = "\(user.distanceFromStartingPoint.value)"
+      
     }
-    
     
 }
 

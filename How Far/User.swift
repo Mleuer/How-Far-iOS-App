@@ -12,11 +12,11 @@ import CoreLocation
 class User: NSObject, CLLocationManagerDelegate {
     
     //MARK: Properties
-    var distance: Measurement<UnitLength> { get {return Measurement(value: 0, unit: UnitLength.feet)}}
+    public var distanceFromStartingPoint: Measurement<UnitLength> { get {return Measurement(value: 0, unit: UnitLength.feet)}}
     var locationManager: CLLocationManager = CLLocationManager()
     var startingPoint: CLLocation? = nil
     
-    public func setStartingPoint() {
+    public func markStartingPoint() {
         
         // For use in foreground
         self.locationManager.requestWhenInUseAuthorization()
