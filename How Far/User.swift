@@ -8,17 +8,25 @@
 
 import Foundation
 import CoreLocation
+import Repeat
 
 class User: NSObject, CLLocationManagerDelegate {
     
     //MARK: Properties
-    public var distanceFromStartingPoint: Measurement<UnitLength> { get {return Measurement(value: 0, unit: UnitLength.feet)}}
+    public var distanceFromStartingPoint: Measurement<UnitLength> {
+        get {
+            if startingPoint == nil || currentLocation == nil {
+                return Measurement(value: 0, unit: UnitLength.feet)
+            }
+            return calculateDistance(coordinate1: startingPoint!.coordinate, coordinate2: currentLocation!.coordinate)
+        }
+    }
     var locationManager: CLLocationManager = CLLocationManager()
     var startingPoint: CLLocation? = nil
+    var currentLocation: CLLocation? = nil
     
-    public func markStartingPoint() {
-        
-        // For use in foreground
+    override init() {
+        super.init()
         self.locationManager.requestWhenInUseAuthorization()
         
         if CLLocationManager.locationServicesEnabled() {
@@ -28,9 +36,12 @@ class User: NSObject, CLLocationManagerDelegate {
         }
     }
     
+    public func markStartingPoint() {
+        startingPoint = currentLocation
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        startingPoint = locations.last
-        var startingCoordinate = startingPoint?.coordinate
+        currentLocation = locations.last
     }
 
 }
