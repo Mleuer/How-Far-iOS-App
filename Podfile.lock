@@ -1,0 +1,16 @@
+PODS:
+  - Repeat (0.5.7)
+
+DEPENDENCIES:
+  - Repeat
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Repeat
+
+SPEC CHECKSUMS:
+  Repeat: 73c5ee602aed8f3c7bf1aa12d4cd0d3dc3edea0a
+
+PODFILE CHECKSUM: 09d3ddaf4be7b0b5928dc8ef1d8dc7f8f64de1c2
+
+COCOAPODS: 1.7.4
